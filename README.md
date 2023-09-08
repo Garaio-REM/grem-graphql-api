@@ -5,7 +5,7 @@ GARAIO REM implements a [GraphQL](https://graphql.org) API to communicate with a
 - need the url of the GARAIO REM endpoint that runs the GraphQL backend
 - know your authentication credentials
 
-Contact [garaio-rem@garaio.com](mailto:info@garaio-rem.ch) to get this information.
+Contact [info@garaio-rem.ch](mailto:info@garaio-rem.ch) to get this information.
 
 Since GraphQL is self documenting, you won't find the API specs here. See "Schema Documentation" for further infos. Every request in GraphQL is a `POST` request with the Query inside the body.
 In GraphiQL (the webinterface of GraphQL) you have the keyboard shortcut `ctrl`+`space` for the autocompletion.
