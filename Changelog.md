@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.22.pre1 (2024-03-09)
+
+- callDbFunction mutation added
+- bankAccount added to person type
+- allow damage cases and property checks for condominiums
+- ownedBy and published filter arguments for damageCases query
+- authorizedApps addoded to user type
+- creationDate added to damage cases and property checks
+
 ## 1.17.4 (2023-01-23)
 
 - fix idxUnitType queries
