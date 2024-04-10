@@ -70,6 +70,10 @@ Access tokens have a short lifespan. They are good for a batch of queries, but d
 }
 ```
 
+## Error handling
+
+When an error occurs, an `errors` node is returned in the response describing the error (eg. `token_expired`, see above). Always check for an `errors` node in the response first. If there is one, ignore the `data` node that might also be present. The reason behind this is that when a rendering error occurs (like a `null` value for a field that is declared as `not null`), GraphQL possibly already streamed part of the result and the response contains an incomplete `data` node.
+
 ## Access Restrictions
 
 Sensitive queries / mutations / fields are protected and not accessible unless we grant access to it, eg tenant / tenancy data. If you try to query fields without the required permissions you will get Not Authorized errors.
