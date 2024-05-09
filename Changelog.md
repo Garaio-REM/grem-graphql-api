@@ -1,5 +1,22 @@
 # Changelog
 
+## 1.22.pre5 (2024-05-09)
+
+- support all kinds of kindOfAdministration
+- make zipCode and city nullable (since not null is not forced in the database)
+
+## 1.22.pre4 (2024-05-07)
+
+- internal stuff
+
+## 1.22.pre3 (2024-05-03)
+
+- do not expose locked bank accounts
+
+## 1.22.pre2 (2024-03-12)
+
+- internal stuff
+
 ## 1.22.pre1 (2024-03-09)
 
 - callDbFunction mutation added
