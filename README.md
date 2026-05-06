@@ -8,7 +8,7 @@ GARAIO REM implements a [GraphQL](https://graphql.org) API to communicate with a
 Contact [info@garaio-rem.ch](mailto:info@garaio-rem.ch) to get this information.
 
 Since GraphQL is self documenting, you won't find the API specs here. See "Schema Documentation" for further infos. Every request in GraphQL is a `POST` request with the Query inside the body.
-In GraphiQL (the webinterface of GraphQL) you have the keyboard shortcut `ctrl`+`space` for the autocompletion.
+We recommend using a GraphQL client like [Bruno](https://www.usebruno.com/) to interact with the API. It provides autocompletion, environment variable management, and local collection storage.
 
 Find out what's new in the [Changelog](Changelog.md)
 
@@ -134,4 +134,4 @@ query {
 
 ## Schema Documentation
 
-We run a [reference server](https://demo.garaio-rem.net/external/graphql/graphiql) where you can explore the queries and mutations. If you want to extract the schema definition, use one of the many avaliable tools against <https://demo.garaio-rem.net/external/graphql>. Be aware some tools like Insomnia need the graphiql endpoint <https://demo.garaio-rem.net/external/graphql/graphiql> and some other tools like graphql playground not.
+To explore the schema, queries, and mutations, point your GraphQL client (e.g., Bruno) to the following endpoint: https://demo.garaio-rem.net/external/graphql . Most clients will automatically fetch the schema once you provide the URL. From there you can explore the queries and mutations.
