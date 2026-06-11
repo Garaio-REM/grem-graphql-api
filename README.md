@@ -134,4 +134,4 @@ query {
 
 ## Schema Documentation
 
-To explore the schema, queries, and mutations, point your GraphQL client (e.g., Bruno) to the following endpoint: https://demo.garaio-rem.net/external/graphql . Most clients will automatically fetch the schema once you provide the URL. From there you can explore the queries and mutations.
+To explore the schema, queries, and mutations, point your GraphQL client (e.g., Bruno) to the following endpoint: https://demo.garaio-rem.net/external/graphql/. Most clients will automatically fetch the schema once you provide the URL. Fetching the schema might require an active authentication token. If your client fails to load it, just make sure you are authenticated and passing the token in your headers. From there you can explore the queries and mutations.
