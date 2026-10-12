@@ -7,7 +7,7 @@ GARAIO REM implements a [GraphQL](https://graphql.org) API to communicate with a
 
 Contact [info@garaio-rem.ch](mailto:info@garaio-rem.ch) to get this information.
 
-Since GraphQL is self documenting, you won't find the API specs here. See "Schema Documentation" for further infos. Every request in GraphQL is a `POST` request with the Query inside the body.
+Since GraphQL is self documenting, you won't find the API specs here. See "Schema Documentation" for how to load the schema of your instance. Every request in GraphQL is a `POST` request with the Query inside the body.
 We recommend using a GraphQL client like [Bruno](https://www.usebruno.com/) to interact with the API. It provides autocompletion, environment variable management, and local collection storage.
 
 Find out what's new in the [Changelog](Changelog.md)
@@ -134,4 +134,14 @@ query {
 
 ## Schema Documentation
 
-To explore the schema, queries, and mutations, point your GraphQL client (e.g., Bruno) to the following endpoint: https://demo.garaio-rem.net/external/graphql/. Most clients will automatically fetch the schema once you provide the URL. Fetching the schema might require an active authentication token. If your client fails to load it, just make sure you are authenticated and passing the token in your headers. From there you can explore the queries and mutations.
+The schema is only available with a valid access token, and only from a GARAIO REM instance you have access to. There is no public schema or explorer. Opening the endpoint in a browser (a `GET` request) always returns `404 oops`.
+
+To explore the schema, queries, and mutations:
+
+1. Get an access token as described under "Authentication".
+2. In your GraphQL client (e.g., Bruno), set the endpoint to `https://<your-instance>/external/graphql/` and add the header `Authorization: Bearer <access token>`.
+3. Load the schema via introspection. Most clients do this automatically once the URL and the token are set.
+
+Without a token, introspection requests fail with a `not_authenticated` error. If your client cannot load the schema, check that the token is passed in the header and has not expired.
+
+The schema differs between instances (permissions, release version). The schema of your own instance is the authoritative one. The URLs in this document (`demo.garaio-rem.net`) are examples only.
